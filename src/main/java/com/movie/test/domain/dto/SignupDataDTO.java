@@ -13,6 +13,7 @@ import lombok.ToString;
 @ToString
 public class SignupDataDTO {
 	
+	//fixme 서버단에서 검증하는 로직이 안보이네요 @Valid 어노테이션 관련을 이용해서 간단한 검증로직을 추가할수도 있으니 참고해주세요
 	private String email;
 	private String pass;
 	private String nickName;
