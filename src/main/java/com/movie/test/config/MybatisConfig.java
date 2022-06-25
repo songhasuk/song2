@@ -22,11 +22,11 @@ public class MybatisConfig {
 	
 	@Bean
 	public SqlSessionFactory sqlSessionFactory() throws Exception {
-		System.out.println(">>>>"+dasource);
+		System.out.println(">>>>"+dasource); //fixme System.out.println 보다는 log.info 등을 사용해주세요
 		SqlSessionFactoryBean factoryBean=new SqlSessionFactoryBean();
 		factoryBean.setDataSource(dasource);
 		//src/main/resources 자원을 읽어들이기위한 객체
-		String locationPattern="classpath:static/mapper/**/*mapper.xml";
+		String locationPattern="classpath:static/mapper/**/*mapper.xml"; //fixme 이런 정적 문자열은 클래스 필드로 빼서 사용해주세요
 		Resource[] resources=applicationContext.getResources(locationPattern);
 		factoryBean.setMapperLocations(resources);
 		//org.apache.ibatis.session.Configuration 반영
