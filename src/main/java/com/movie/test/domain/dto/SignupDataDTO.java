@@ -4,10 +4,12 @@ import javax.persistence.Column;
 
 import com.movie.test.domain.entity.Member;
 
+import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
 @Setter
+@Getter
 @ToString
 public class SignupDataDTO {
 	
