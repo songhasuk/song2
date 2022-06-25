@@ -15,7 +15,7 @@ public class LonginServiceProc implements LonginService {
 	MemberRepository repository; //fixme 특별한 이유가 없다면 접근제어는 가능한 엄격하게 해주세요. private
 	
 	@Override
-	public void save(SignupDataDTO dto, Model model) {
+	public void save(SignupDataDTO dto, Model model) { //Model 클래스가 서비스 레이어까지 침범하는게 적절하지 않은거같아요 model.addAttribute는 컨트롤러에서 하는게 어
 		 
 		repository.save(dto.toEntity());
 		model.addAttribute("logData", dto);
