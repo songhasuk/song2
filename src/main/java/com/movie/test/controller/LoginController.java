@@ -14,7 +14,7 @@ import com.movie.test.service.LonginService;
 public class LoginController {
 	
 	@Autowired
-	LonginService service ;
+	LonginService service ; //fixme 접근제어자, 롬복어노테이션의 활용 고민해주세요.
 	
 	//페이지 이동
 	@GetMapping("signup")
